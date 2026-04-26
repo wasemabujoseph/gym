@@ -901,7 +901,6 @@ export default function App() {
                     day={selectedDay}
                     progress={getDayProgress(selectedDay)}
                     onToggleSet={(exId, idx, total) => toggleSetComplete(selectedDay, exId, idx, total)}
-                    waterIntake={state.waterIntake}
                     onAddWater={addWater}
                     savedNote={state.trainingNotes[ex.id] || ""}
                     onSaveNote={(note) => saveNote(ex.id, note)}
@@ -955,7 +954,6 @@ export default function App() {
                     progress={{}}
                     onToggleSet={() => {}}
                     compact
-                    waterIntake={state.waterIntake}
                     onAddWater={addWater}
                     savedNote={state.trainingNotes[ex.id] || ""}
                     onSaveNote={(note) => saveNote(ex.id, note)}
@@ -1180,7 +1178,6 @@ function ExerciseCard({
   progress,
   onToggleSet,
   compact,
-  waterIntake,
   onAddWater,
   savedNote,
   onSaveNote,
@@ -1191,7 +1188,6 @@ function ExerciseCard({
   progress: DayProgress;
   onToggleSet: (exId: string, idx: number, total: number) => void;
   compact?: boolean;
-  waterIntake: number;
   onAddWater: () => void;
   savedNote: string;
   onSaveNote: (note: string) => void;

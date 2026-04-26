@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -79,7 +80,6 @@
 }
 
 /* Arabic font support */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
 
 [dir="rtl"] body {
   font-family: 'Cairo', system-ui, -apple-system, sans-serif;
