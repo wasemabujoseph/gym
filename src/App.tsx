@@ -1179,6 +1179,9 @@ function ExerciseCard({
   day,
   progress,
   onToggleSet,
+  compact,
+  waterIntake,
+  onAddWater,
   savedNote,
   onSaveNote,
 }: {
