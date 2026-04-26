@@ -177,7 +177,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استهدف أعلى الصدر بزاوية ٣٠–٤٥ درجة",
       notesEn: "Target upper chest at 30-45 degree angle",
       notesAr: "استهدف أعلى الصدر بزاوية ٣٠–٤٥ درجة",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Incline-Chest-Press.gif",
       links: makeLinks("incline chest press machine")
     }
   },
@@ -303,7 +303,7 @@ export const EXERCISES: Exercise[] = [
       notes: "جهاز آمن للكتف",
       notesEn: "Shoulder-safe machine",
       notesAr: "جهاز آمن للكتف",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Shoulder-Press.gif",
       links: makeLinks("shoulder press machine")
     }
   },
@@ -345,7 +345,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ممتاز للعزل",
       notesEn: "Great for isolation",
       notesAr: "ممتاز للعزل",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lateral-Raise-Machine.gif",
       links: makeLinks("lateral raise machine")
     }
   },
@@ -387,7 +387,7 @@ export const EXERCISES: Exercise[] = [
       notes: "جهاز مستقل لكل ذراع",
       notesEn: "Independent arm machine",
       notesAr: "جهاز مستقل لكل ذراع",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Preacher-Curl.gif",
       links: makeLinks("machine bicep curl")
     }
   },
@@ -472,7 +472,7 @@ export const EXERCISES: Exercise[] = [
       notes: "آمن للظهر",
       notesEn: "Back-safe",
       notesAr: "آمن للظهر",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2024/10/smith-machine-squat.gif",
       links: makeLinks("squat machine")
     }
   },
@@ -640,7 +640,7 @@ export const EXERCISES: Exercise[] = [
       notes: "بديل آمن للركبة",
       notesEn: "Knee-safe alternative",
       notesAr: "بديل آمن للركبة",
-      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif",
       links: makeLinks("leg press machine")
     }
   },
@@ -724,7 +724,7 @@ export const EXERCISES: Exercise[] = [
       notes: "آمن للظهر",
       notesEn: "Back-safe",
       notesAr: "آمن للظهر",
-      gifUrl: "https://media.tenor.com/XfUvTfT2x7cAAAAM/plank-abs.gif",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Crunch-Machine.gif",
       links: makeLinks("ab crunch machine")
     }
   },

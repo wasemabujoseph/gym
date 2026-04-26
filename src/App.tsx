@@ -16,6 +16,16 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Switch } from "@/components/ui/switch";
 import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
+import {
   Dumbbell,
   Calendar,
   CheckCircle2,
@@ -79,6 +89,9 @@ interface AppStateStored {
   streak: number;
   lastWorkoutDate: string;
   personalRecords: Record<string, number>;
+  xp: number; // Experience points based on sets completed
+  level: number;
+  trainingNotes: Record<string, string>; // exerciseId -> note
 }
 
 /* ------------------------------------------------------------------ */
@@ -110,6 +123,9 @@ function loadState(): AppStateStored {
     streak: 0,
     lastWorkoutDate: "",
     personalRecords: {},
+    xp: 0,
+    level: 1,
+    trainingNotes: {},
   };
 }
 
@@ -203,6 +219,22 @@ const UI = {
     completedSets: "Completed",
     weeklyStats: "Weekly Stats",
     motivation: "Stay consistent. The results will follow.",
+    level: "Level",
+    xp: "XP",
+    nextLevel: "Next Level",
+    trainingNotes: "Training Notes",
+    saveNote: "Save Note",
+    autoRest: "Auto Rest",
+    dashboard: "Dashboard",
+    recentPrs: "Recent PRs",
+    muscleGroups: "Muscle Groups",
+    all: "All",
+    chest: "Chest",
+    back: "Back",
+    shoulders: "Shoulders",
+    legs: "Legs",
+    arms: "Arms",
+    core: "Core",
   },
   ar: {
     brand: "أبو فوزان | تدريب النخبة",
@@ -286,6 +318,22 @@ const UI = {
     completedSets: "المكتملة",
     weeklyStats: "إحصائيات الأسبوع",
     motivation: "استمرارية. النتائج ستأتي.",
+    level: "المستوى",
+    xp: "خبرة",
+    nextLevel: "المستوى القادم",
+    trainingNotes: "ملاحظات التدريب",
+    saveNote: "حفظ الملاحظة",
+    autoRest: "راحة تلقائية",
+    dashboard: "لوحة التحكم",
+    recentPrs: "أرقام قياسية أخيرة",
+    muscleGroups: "العضلات",
+    all: "الكل",
+    chest: "الصدر",
+    back: "الظهر",
+    shoulders: "الأكتاف",
+    legs: "الأرجل",
+    arms: "الأذرع",
+    core: "البطن/الجذع",
   },
 };
 
@@ -295,7 +343,8 @@ const UI = {
 export default function App() {
   const [state, setState] = useState<AppStateStored>(loadState);
   const [selectedDay, setSelectedDay] = useState<string>(getTodayDay());
-  const [activeTab, setActiveTab] = useState<string>("schedule");
+  const [activeTab, setActiveTab] = useState<string>("dashboard");
+  const [selectedMuscle, setSelectedMuscle] = useState<string>("All");
   const [sessionSeconds, setSessionSeconds] = useState(0);
   const [sessionRunning, setSessionRunning] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -371,6 +420,15 @@ export default function App() {
       exProg[setIndex] = !exProg[setIndex];
       dayProg[exerciseId] = exProg;
       const newProgress = { ...s.progress, [day]: dayProg };
+      
+      // XP Logic
+      let xp = s.xp + 10;
+      let level = s.level;
+      const nextLevelXp = level * 100 * (1 + (level * 0.1)); // Scaling difficulty
+      if (xp >= nextLevelXp) {
+        level += 1;
+        // Optional: play sound or alert
+      }
 
       // streak logic
       const today = formatDate(new Date());
@@ -388,7 +446,7 @@ export default function App() {
         }
         lastWorkoutDate = today;
       }
-      return { ...s, progress: newProgress, streak, lastWorkoutDate };
+      return { ...s, progress: newProgress, streak, lastWorkoutDate, xp, level };
     });
   };
 
@@ -426,8 +484,14 @@ export default function App() {
       }
       return { ...s, weightLogs: logs, personalRecords: prs };
     });
-    setLogWeightVal("");
     setLogRepsVal("");
+  };
+
+  const saveNote = (exerciseId: string, note: string) => {
+    setState(s => ({
+      ...s,
+      trainingNotes: { ...s.trainingNotes, [exerciseId]: note }
+    }));
   };
 
   /* BMI */
@@ -480,7 +544,11 @@ export default function App() {
 
   const filteredExercises = EXERCISES.filter((e) => {
     const q = searchQuery.toLowerCase();
-    return (
+    const muscleMatch = selectedMuscle === "All" || 
+      e.primaryEn === selectedMuscle || 
+      (selectedMuscle === "Core" && e.primaryEn === "Abs");
+    
+    return muscleMatch && (
       e.exercise.toLowerCase().includes(q) ||
       e.exerciseAr.toLowerCase().includes(q) ||
       e.primary.toLowerCase().includes(q) ||
@@ -491,6 +559,8 @@ export default function App() {
       e.machineVariation.toolEn.toLowerCase().includes(q)
     );
   });
+
+  const muscleGroups = ["All", "Chest", "Back", "Shoulders", "Legs", "Arms", "Core"];
 
   const weeklyProgress = DAY_SESSIONS.map((d) => {
     const total = getTotalSetsForDay(d);
@@ -568,7 +638,10 @@ export default function App() {
 
         {/* ===== TABS ===== */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="mb-6 grid w-full grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
+          <TabsList className="mb-6 grid w-full grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
+            <TabsTrigger value="dashboard" className="gap-2">
+              <BarChart3 className="h-4 w-4" /> {t.dashboard}
+            </TabsTrigger>
             <TabsTrigger value="schedule" className="gap-2">
               <Calendar className="h-4 w-4" /> {t.weeklyPlan}
             </TabsTrigger>
@@ -582,12 +655,121 @@ export default function App() {
               <TrendingUp className="h-4 w-4" /> {t.progress}
             </TabsTrigger>
             <TabsTrigger value="tools" className="gap-2">
-              <BarChart3 className="h-4 w-4" /> {t.tools}
+              <Info className="h-4 w-4" /> {t.tools}
             </TabsTrigger>
             <TabsTrigger value="saved" className="gap-2">
               <Save className="h-4 w-4" /> {t.saved}
             </TabsTrigger>
           </TabsList>
+
+          {/* ===== DASHBOARD TAB ===== */}
+          <TabsContent value="dashboard" className="space-y-6">
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Level & XP Card */}
+              <Card className="bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between">
+                    <span className="flex items-center gap-2">
+                      <Trophy className="h-5 w-5 text-yellow-500" />
+                      {t.level} {state.level}
+                    </span>
+                    <span className="text-sm font-normal text-muted-foreground">
+                      {Math.floor(state.xp)} / {Math.floor(state.level * 100 * (1 + (state.level * 0.1)))} {t.xp}
+                    </span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Progress 
+                    value={(state.xp / (state.level * 100 * (1 + (state.level * 0.1)))) * 100} 
+                    className="h-3"
+                  />
+                  <p className="mt-2 text-xs text-muted-foreground text-center">
+                    {t.nextLevel}: {Math.floor(state.level * 100 * (1 + (state.level * 0.1)) - state.xp)} {t.xp} to go
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Weekly Activity Chart */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <BarChart3 className="h-4 w-4 text-cyan-500" />
+                    {t.weeklyStats}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="h-64">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={weeklyProgress}>
+                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--muted-foreground) / 0.1)" />
+                      <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 12 }} />
+                      <YAxis hide />
+                      <Tooltip 
+                        contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+                        cursor={{ fill: 'hsl(var(--muted) / 0.5)' }}
+                      />
+                      <Bar dataKey="done" radius={[4, 4, 0, 0]} barSize={30}>
+                        {weeklyProgress.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.pct > 80 ? '#10b981' : entry.pct > 40 ? '#0ea5e9' : '#94a3b8'} />
+                        ))}
+                      </Bar>
+                    </BarChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+               {/* Recent PRs */}
+               <Card>
+                <CardHeader>
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-purple-500" />
+                    {t.recentPrs}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {Object.entries(state.personalRecords).slice(0, 3).map(([exId, weight]) => {
+                      const ex = EXERCISES.find((e) => e.id === exId);
+                      return (
+                        <div key={exId} className="flex items-center justify-between border-b pb-2 last:border-0 last:pb-0">
+                          <div className="text-sm font-medium">{ex ? (state.lang === "en" ? ex.exercise : ex.exerciseAr) : exId}</div>
+                          <div className="flex items-center gap-2">
+                            <Weight className="h-3 w-3 text-muted-foreground" />
+                            <span className="font-mono font-bold text-cyan-500">{weight} kg</span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {Object.keys(state.personalRecords).length === 0 && (
+                      <p className="text-sm text-muted-foreground py-4 text-center">{t.noResults}</p>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Next Workout Card */}
+              <Card className="cursor-pointer hover:border-cyan-500/50 transition-colors" onClick={() => setActiveTab("workout")}>
+                <CardHeader>
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <Play className="h-4 w-4 text-emerald-500" />
+                    {t.todayWorkout}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-xl font-bold">{isRTL ? selectedSession?.dayAr : selectedSession?.dayEn}</div>
+                      <div className="text-sm text-muted-foreground">{isRTL ? selectedSession?.typeAr : selectedSession?.type}</div>
+                    </div>
+                    <Badge className="bg-emerald-500 hover:bg-emerald-600">
+                      {selectedSession?.exercises.length} {t.exercises}
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
 
           {/* ===== SCHEDULE TAB ===== */}
           <TabsContent value="schedule" className="space-y-6">
@@ -721,6 +903,8 @@ export default function App() {
                     onToggleSet={(exId, idx, total) => toggleSetComplete(selectedDay, exId, idx, total)}
                     waterIntake={state.waterIntake}
                     onAddWater={addWater}
+                    savedNote={state.trainingNotes[ex.id] || ""}
+                    onSaveNote={(note) => saveNote(ex.id, note)}
                   />
                 ))}
               </div>
@@ -729,13 +913,34 @@ export default function App() {
 
           {/* ===== LIBRARY TAB ===== */}
           <TabsContent value="library" className="space-y-6">
-            <div className="flex gap-2">
-              <Input
-                placeholder={t.exerciseSearch}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="max-w-md"
-              />
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-2">
+                <Input
+                  placeholder={t.exerciseSearch}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="max-w-md"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {muscleGroups.map((m) => (
+                  <Button 
+                    key={m} 
+                    variant={selectedMuscle === m ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedMuscle(m)}
+                    className="rounded-full px-4"
+                  >
+                    {m === "All" ? t.all : 
+                     m === "Chest" ? t.chest :
+                     m === "Back" ? t.back :
+                     m === "Shoulders" ? t.shoulders :
+                     m === "Legs" ? t.legs :
+                     m === "Arms" ? t.arms :
+                     m === "Core" ? t.core : m}
+                  </Button>
+                ))}
+              </div>
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {filteredExercises.length === 0 ? (
@@ -752,6 +957,8 @@ export default function App() {
                     compact
                     waterIntake={state.waterIntake}
                     onAddWater={addWater}
+                    savedNote={state.trainingNotes[ex.id] || ""}
+                    onSaveNote={(note) => saveNote(ex.id, note)}
                   />
                 ))
               )}
@@ -972,9 +1179,8 @@ function ExerciseCard({
   day,
   progress,
   onToggleSet,
-  compact,
-  waterIntake: _waterIntake,
-  onAddWater,
+  savedNote,
+  onSaveNote,
 }: {
   exercise: Exercise;
   lang: "en" | "ar";
@@ -984,10 +1190,14 @@ function ExerciseCard({
   compact?: boolean;
   waterIntake: number;
   onAddWater: () => void;
+  savedNote: string;
+  onSaveNote: (note: string) => void;
 }) {
   const [eqMode, setEqMode] = useState<"dumbbell" | "machine">("dumbbell");
   const [timerSec, setTimerSec] = useState(0);
   const [timerRunning, setTimerRunning] = useState(false);
+  const [note, setNote] = useState(savedNote);
+  const [isAutoRest, setIsAutoRest] = useState(true);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const t = lang === "en" ? UI.en : UI.ar;
@@ -1029,6 +1239,14 @@ function ExerciseCard({
     return match ? parseInt(match[0]) : 60;
   };
 
+  const handleToggleSet = (idx: number) => {
+    const isNowComplete = !completedArr[idx];
+    onToggleSet(exercise.id, idx, totalSets);
+    if (isNowComplete && isAutoRest && !compact) {
+      startTimer(getRestSeconds());
+    }
+  };
+
   const links = variation.links;
 
   return (
@@ -1038,9 +1256,10 @@ function ExerciseCard({
           {/* GIF */}
           <div className={`relative bg-muted/30 ${compact ? "h-40 w-full" : "h-48 w-full md:h-auto md:w-56 lg:w-64"}`}>
             <img
+              key={`${exercise.id}-${eqMode}`} // Force re-render on mode change
               src={variation.gifUrl || exercise.defaultGif}
               alt={exercise.exercise}
-              className="h-full w-full object-contain"
+              className="h-full w-full object-contain transition-opacity duration-300"
               loading="lazy"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
@@ -1114,18 +1333,35 @@ function ExerciseCard({
                     return (
                       <button
                         key={i}
-                        onClick={() => onToggleSet(exercise.id, i, totalSets)}
+                        onClick={() => handleToggleSet(i)}
                         className={`flex h-10 w-10 items-center justify-center rounded-lg border-2 text-sm font-bold transition-all ${
                           done
-                            ? "border-emerald-500 bg-emerald-500/10 text-emerald-600"
+                            ? "border-emerald-500 bg-emerald-500/10 text-emerald-600 shadow-sm"
                             : "border-border bg-background text-muted-foreground hover:border-cyan-400"
                         }`}
                         title={`Set ${i + 1}`}
                       >
-                        {done ? <CheckCircle2 className="h-5 w-5" /> : i + 1}
+                        {done ? <CheckCircle2 className="h-5 w-5 animate-in zoom-in duration-300" /> : i + 1}
                       </button>
                     );
                   })}
+                </div>
+              </div>
+            )}
+
+            {/* Note input */}
+            {!compact && (
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Input 
+                    placeholder={t.trainingNotes} 
+                    value={note} 
+                    onChange={(e) => setNote(e.target.value)}
+                    className="h-8 text-xs"
+                  />
+                  <Button size="sm" variant="ghost" className="h-8 px-2" onClick={() => onSaveNote(note)}>
+                    <Save className="h-3 w-3" />
+                  </Button>
                 </div>
               </div>
             )}
@@ -1141,9 +1377,11 @@ function ExerciseCard({
                   {timerRunning ? <Pause className="mr-1 h-3 w-3" /> : <Play className="mr-1 h-3 w-3" />}
                   {timerRunning ? t.pauseTimer : `${t.startTimer} (${getRestSeconds()}s)`}
                 </Button>
-                <Button variant="ghost" size="sm" onClick={() => { setTimerSec(0); setTimerRunning(false); if (timerRef.current) clearInterval(timerRef.current); }}>
-                  <RotateCcw className="mr-1 h-3 w-3" /> {t.resetTimer}
-                </Button>
+                <div className="flex items-center gap-2 ml-2">
+                  <Switch checked={isAutoRest} onCheckedChange={setIsAutoRest} id={`auto-rest-${exercise.id}`} />
+                  <Label htmlFor={`auto-rest-${exercise.id}`} className="text-xs cursor-pointer">{t.autoRest}</Label>
+                </div>
+                <div className="flex-1" />
                 <Button variant="ghost" size="sm" onClick={onAddWater}>
                   <Droplets className="mr-1 h-3 w-3 text-blue-500" /> +1
                 </Button>
