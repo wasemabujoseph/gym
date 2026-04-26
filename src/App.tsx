@@ -108,13 +108,7 @@ function formatDate(date: Date): string {
 }
 
 function loadState(): AppStateStored {
-  const raw = localStorage.getItem("abu_fowzan_fitness");
-  if (raw) {
-    try {
-      return JSON.parse(raw);
-    } catch { /* empty */ }
-  }
-  return {
+  const defaultState: AppStateStored = {
     lang: "ar",
     theme: "dark",
     weightLogs: [],
@@ -127,6 +121,15 @@ function loadState(): AppStateStored {
     level: 1,
     trainingNotes: {},
   };
+
+  const raw = localStorage.getItem("abu_fowzan_fitness");
+  if (raw) {
+    try {
+      const parsed = JSON.parse(raw);
+      return { ...defaultState, ...parsed };
+    } catch { /* empty */ }
+  }
+  return defaultState;
 }
 
 function saveState(state: AppStateStored) {
