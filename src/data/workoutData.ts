@@ -117,7 +117,7 @@ export const EXERCISES: Exercise[] = [
     notes: "نزول بطيء ودفع قوي",
     notesEn: "Slow lowering and strong press",
     notesAr: "نزول بطيء ودفع قوي",
-    defaultGif: "/exercises/db-chest-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
     dumbbellVariation: {
       tool: "بنش + دمبل",
       toolEn: "Bench + dumbbell",
@@ -125,7 +125,7 @@ export const EXERCISES: Exercise[] = [
       notes: "نزول بطيء ودفع قوي",
       notesEn: "Slow lowering and strong press",
       notesAr: "نزول بطيء ودفع قوي",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
       links: makeLinks("dumbbell chest press", "https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/")
     },
     machineVariation: {
@@ -135,7 +135,7 @@ export const EXERCISES: Exercise[] = [
       notes: "اضبط المقعد بحيث تكون اليدين مستوية مع الصدر",
       notesEn: "Adjust seat so handles align with mid-chest",
       notesAr: "اضبط المقعد بحيث تكون اليدين مستوية مع الصدر",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Chest-Press-Machine.gif",
       links: makeLinks("machine chest press")
     }
   },
@@ -159,7 +159,7 @@ export const EXERCISES: Exercise[] = [
     notes: "زاوية ميل متوسطة",
     notesEn: "Moderate incline angle",
     notesAr: "زاوية ميل متوسطة",
-    defaultGif: "/exercises/incline-db-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
     dumbbellVariation: {
       tool: "بنش مائل + دمبل",
       toolEn: "Incline bench + dumbbell",
@@ -167,7 +167,7 @@ export const EXERCISES: Exercise[] = [
       notes: "زاوية ميل متوسطة",
       notesEn: "Moderate incline angle",
       notesAr: "زاوية ميل متوسطة",
-      gifUrl: "/exercises/incline-db-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
       links: makeLinks("incline dumbbell press", "https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/")
     },
     machineVariation: {
@@ -177,7 +177,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استهدف أعلى الصدر بزاوية ٣٠–٤٥ درجة",
       notesEn: "Target upper chest at 30-45 degree angle",
       notesAr: "استهدف أعلى الصدر بزاوية ٣٠–٤٥ درجة",
-      gifUrl: "/exercises/incline-db-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
       links: makeLinks("incline chest press machine")
     }
   },
@@ -201,7 +201,7 @@ export const EXERCISES: Exercise[] = [
     notes: "اسحب بالكوع وارفع الصدر",
     notesEn: "Pull with the elbows and lift the chest",
     notesAr: "اسحب بالكوع وارفع الصدر",
-    defaultGif: "/exercises/lat-pulldown.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
     dumbbellVariation: {
       tool: "عقلة / دمبل مستقيم",
       toolEn: "Pull-up bar",
@@ -209,7 +209,7 @@ export const EXERCISES: Exercise[] = [
       notes: "اسحب بالكوع وارفع الصدر",
       notesEn: "Pull with the elbows and lift the chest",
       notesAr: "اسحب بالكوع وارفع الصدر",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown pull up", "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/")
     },
     machineVariation: {
@@ -219,7 +219,7 @@ export const EXERCISES: Exercise[] = [
       notes: "جهاز ممتاز للتحكم بالوزن",
       notesEn: "Excellent machine for controlled weight",
       notesAr: "جهاز ممتاز للتحكم بالوزن",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown machine")
     }
   },
@@ -243,7 +243,7 @@ export const EXERCISES: Exercise[] = [
     notes: "اسحب باتجاه الخصر",
     notesEn: "Pull toward the waist",
     notesAr: "اسحب باتجاه الخصر",
-    defaultGif: "/exercises/single-arm-row.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif",
     dumbbellVariation: {
       tool: "بنش + دمبل",
       toolEn: "Bench + dumbbell",
@@ -251,7 +251,7 @@ export const EXERCISES: Exercise[] = [
       notes: "اسحب باتجاه الخصر",
       notesEn: "Pull toward the waist",
       notesAr: "اسحب باتجاه الخصر",
-      gifUrl: "/exercises/single-arm-row.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif",
       links: makeLinks("single arm dumbbell row", "https://www.acefitness.org/resources/everyone/exercise-library/126/single-arm-row/")
     },
     machineVariation: {
@@ -261,7 +261,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حافظ على الظهر مستقيم",
       notesEn: "Keep back straight",
       notesAr: "حافظ على الظهر مستقيم",
-      gifUrl: "/exercises/single-arm-row.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif",
       links: makeLinks("machine row")
     }
   },
@@ -285,7 +285,7 @@ export const EXERCISES: Exercise[] = [
     notes: "لا ترفع الكتف للأعلى",
     notesEn: "Do not shrug the shoulders upward",
     notesAr: "لا ترفع الكتف للأعلى",
-    defaultGif: "/exercises/shoulder-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
     dumbbellVariation: {
       tool: "بنش + دمبل",
       toolEn: "Bench + dumbbell",
@@ -293,7 +293,7 @@ export const EXERCISES: Exercise[] = [
       notes: "لا ترفع الكتف للأعلى",
       notesEn: "Do not shrug the shoulders upward",
       notesAr: "لا ترفع الكتف للأعلى",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("seated dumbbell shoulder press", "https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/")
     },
     machineVariation: {
@@ -303,7 +303,7 @@ export const EXERCISES: Exercise[] = [
       notes: "جهاز آمن للكتف",
       notesEn: "Shoulder-safe machine",
       notesAr: "جهاز آمن للكتف",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("shoulder press machine")
     }
   },
@@ -327,7 +327,7 @@ export const EXERCISES: Exercise[] = [
     notes: "حركة نظيفة بدون غش",
     notesEn: "Strict clean motion with no cheating",
     notesAr: "حركة نظيفة بدون غش",
-    defaultGif: "/exercises/lateral-raise.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -335,7 +335,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حركة نظيفة بدون غش",
       notesEn: "Strict clean motion with no cheating",
       notesAr: "حركة نظيفة بدون غش",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise", "https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/")
     },
     machineVariation: {
@@ -345,7 +345,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ممتاز للعزل",
       notesEn: "Great for isolation",
       notesAr: "ممتاز للعزل",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise machine")
     }
   },
@@ -369,7 +369,7 @@ export const EXERCISES: Exercise[] = [
     notes: "الكوع ثابت",
     notesEn: "Keep the elbow stable",
     notesAr: "الكوع ثابت",
-    defaultGif: "/exercises/bicep-curl.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -377,7 +377,7 @@ export const EXERCISES: Exercise[] = [
       notes: "الكوع ثابت",
       notesEn: "Keep the elbow stable",
       notesAr: "الكوع ثابت",
-      gifUrl: "/exercises/bicep-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
       links: makeLinks("dumbbell bicep curl", "https://www.acefitness.org/resources/everyone/exercise-library/body-part/arms/")
     },
     machineVariation: {
@@ -387,7 +387,7 @@ export const EXERCISES: Exercise[] = [
       notes: "جهاز مستقل لكل ذراع",
       notesEn: "Independent arm machine",
       notesAr: "جهاز مستقل لكل ذراع",
-      gifUrl: "/exercises/bicep-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
       links: makeLinks("machine bicep curl")
     }
   },
@@ -411,7 +411,7 @@ export const EXERCISES: Exercise[] = [
     notes: "شد كامل ونزول متحكم",
     notesEn: "Full contraction and controlled lowering",
     notesAr: "شد كامل ونزول متحكم",
-    defaultGif: "/exercises/triceps-pushdown.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
     dumbbellVariation: {
       tool: "دمبل (سحب خلفي)",
       toolEn: "Dumbbell (kickback)",
@@ -419,7 +419,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ثبت الكوع ومد الذراع",
       notesEn: "Lock elbow and extend arm",
       notesAr: "ثبت الكوع ومد الذراع",
-      gifUrl: "/exercises/triceps-pushdown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
       links: makeLinks("dumbbell triceps kickback")
     },
     machineVariation: {
@@ -429,7 +429,7 @@ export const EXERCISES: Exercise[] = [
       notes: "شد كامل ونزول متحكم",
       notesEn: "Full contraction and controlled lowering",
       notesAr: "شد كامل ونزول متحكم",
-      gifUrl: "/exercises/triceps-pushdown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
       links: makeLinks("triceps pushdown", "https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/")
     }
   },
@@ -454,7 +454,7 @@ export const EXERCISES: Exercise[] = [
     notes: "نزول بتحكم",
     notesEn: "Controlled descent",
     notesAr: "نزول بتحكم",
-    defaultGif: "/exercises/goblet-squat.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -462,7 +462,7 @@ export const EXERCISES: Exercise[] = [
       notes: "نزول بتحكم",
       notesEn: "Controlled descent",
       notesAr: "نزول بتحكم",
-      gifUrl: "/exercises/goblet-squat.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
       links: makeLinks("goblet squat", "https://www.acefitness.org/resources/everyone/exercise-library/362/goblet-squat/")
     },
     machineVariation: {
@@ -472,7 +472,7 @@ export const EXERCISES: Exercise[] = [
       notes: "آمن للظهر",
       notesEn: "Back-safe",
       notesAr: "آمن للظهر",
-      gifUrl: "/exercises/goblet-squat.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
       links: makeLinks("squat machine")
     }
   },
@@ -496,7 +496,7 @@ export const EXERCISES: Exercise[] = [
     notes: "الحركة من الحوض",
     notesEn: "Hinge from the hips",
     notesAr: "الحركة من الحوض",
-    defaultGif: "/exercises/romanian-deadlift.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -504,7 +504,7 @@ export const EXERCISES: Exercise[] = [
       notes: "الحركة من الحوض",
       notesEn: "Hinge from the hips",
       notesAr: "الحركة من الحوض",
-      gifUrl: "/exercises/romanian-deadlift.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif",
       links: makeLinks("romanian deadlift dumbbell", "https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/")
     },
     machineVariation: {
@@ -514,7 +514,7 @@ export const EXERCISES: Exercise[] = [
       notes: "الحركة من الحوض",
       notesEn: "Hinge from the hips",
       notesAr: "الحركة من الحوض",
-      gifUrl: "/exercises/romanian-deadlift.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif",
       links: makeLinks("romanian deadlift machine")
     }
   },
@@ -538,7 +538,7 @@ export const EXERCISES: Exercise[] = [
     notes: "توقف بسيط أعلى الحركة",
     notesEn: "Brief pause at the top",
     notesAr: "توقف بسيط أعلى الحركة",
-    defaultGif: "/exercises/leg-extension.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
     dumbbellVariation: {
       tool: "سكوات بساق واحدة",
       toolEn: "Single-leg squat / step-up",
@@ -546,7 +546,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استبدال منزلي",
       notesEn: "Home alternative",
       notesAr: "استبدال منزلي",
-      gifUrl: "/exercises/leg-extension.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
       links: makeLinks("dumbbell leg extension alternative")
     },
     machineVariation: {
@@ -556,7 +556,7 @@ export const EXERCISES: Exercise[] = [
       notes: "توقف بسيط أعلى الحركة",
       notesEn: "Brief pause at the top",
       notesAr: "توقف بسيط أعلى الحركة",
-      gifUrl: "/exercises/leg-extension.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
       links: makeLinks("leg extension machine")
     }
   },
@@ -580,7 +580,7 @@ export const EXERCISES: Exercise[] = [
     notes: "نزول بطيء",
     notesEn: "Slow lowering",
     notesAr: "نزول بطيء",
-    defaultGif: "/exercises/leg-curl.png",
+    defaultGif: "https://media.tenor.com/tH48j7ZpP_gAAAAM/seated-leg-curl.gif",
     dumbbellVariation: {
       tool: "دمبل (رفعة رومانية)",
       toolEn: "Dumbbell (RDL)",
@@ -588,7 +588,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استبدال منزلي",
       notesEn: "Home alternative",
       notesAr: "استبدال منزلي",
-      gifUrl: "/exercises/romanian-deadlift.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif",
       links: makeLinks("dumbbell leg curl alternative")
     },
     machineVariation: {
@@ -598,7 +598,7 @@ export const EXERCISES: Exercise[] = [
       notes: "نزول بطيء",
       notesEn: "Slow lowering",
       notesAr: "نزول بطيء",
-      gifUrl: "/exercises/leg-curl.png",
+      gifUrl: "https://media.tenor.com/tH48j7ZpP_gAAAAM/seated-leg-curl.gif",
       links: makeLinks("leg curl machine")
     }
   },
@@ -622,7 +622,7 @@ export const EXERCISES: Exercise[] = [
     notes: "خطوة ثابتة",
     notesEn: "Stable step pattern",
     notesAr: "خطوة ثابتة",
-    defaultGif: "/exercises/lunge.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
     dumbbellVariation: {
       tool: "دمبل / وزن جسم",
       toolEn: "Dumbbell / bodyweight",
@@ -630,7 +630,7 @@ export const EXERCISES: Exercise[] = [
       notes: "خطوة ثابتة",
       notesEn: "Stable step pattern",
       notesAr: "خطوة ثابتة",
-      gifUrl: "/exercises/lunge.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
       links: makeLinks("dumbbell lunge", "https://www.acefitness.org/resources/everyone/exercise-library/363/lunge/")
     },
     machineVariation: {
@@ -640,7 +640,7 @@ export const EXERCISES: Exercise[] = [
       notes: "بديل آمن للركبة",
       notesEn: "Knee-safe alternative",
       notesAr: "بديل آمن للركبة",
-      gifUrl: "/exercises/lunge.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
       links: makeLinks("leg press machine")
     }
   },
@@ -664,7 +664,7 @@ export const EXERCISES: Exercise[] = [
     notes: "طلوع كامل ونزول كامل",
     notesEn: "Full stretch and full rise",
     notesAr: "طلوع كامل ونزول كامل",
-    defaultGif: "/exercises/calf-raise.png",
+    defaultGif: "https://media.tenor.com/yG12j-Nre9UAAAAM/calves-raise.gif",
     dumbbellVariation: {
       tool: "وزن جسم / دمبل",
       toolEn: "Bodyweight / dumbbell",
@@ -672,7 +672,7 @@ export const EXERCISES: Exercise[] = [
       notes: "طلوع كامل ونزول كامل",
       notesEn: "Full stretch and full rise",
       notesAr: "طلوع كامل ونزول كامل",
-      gifUrl: "/exercises/calf-raise.png",
+      gifUrl: "https://media.tenor.com/yG12j-Nre9UAAAAM/calves-raise.gif",
       links: makeLinks("standing calf raise", "https://www.acefitness.org/resources/everyone/exercise-library/73/standing-calf-raises-wall/")
     },
     machineVariation: {
@@ -682,7 +682,7 @@ export const EXERCISES: Exercise[] = [
       notes: "طلوع كامل",
       notesEn: "Full stretch",
       notesAr: "طلوع كامل",
-      gifUrl: "/exercises/calf-raise.png",
+      gifUrl: "https://media.tenor.com/yG12j-Nre9UAAAAM/calves-raise.gif",
       links: makeLinks("machine calf raise")
     }
   },
@@ -706,7 +706,7 @@ export const EXERCISES: Exercise[] = [
     notes: "شد البطن",
     notesEn: "Brace the abs",
     notesAr: "شد البطن",
-    defaultGif: "/exercises/plank.png",
+    defaultGif: "https://media.tenor.com/XfUvTfT2x7cAAAAM/plank-abs.gif",
     dumbbellVariation: {
       tool: "وزن جسم",
       toolEn: "Bodyweight",
@@ -714,7 +714,7 @@ export const EXERCISES: Exercise[] = [
       notes: "شد البطن",
       notesEn: "Brace the abs",
       notesAr: "شد البطن",
-      gifUrl: "/exercises/plank.png",
+      gifUrl: "https://media.tenor.com/XfUvTfT2x7cAAAAM/plank-abs.gif",
       links: makeLinks("plank exercise")
     },
     machineVariation: {
@@ -724,7 +724,7 @@ export const EXERCISES: Exercise[] = [
       notes: "آمن للظهر",
       notesEn: "Back-safe",
       notesAr: "آمن للظهر",
-      gifUrl: "/exercises/plank.png",
+      gifUrl: "https://media.tenor.com/XfUvTfT2x7cAAAAM/plank-abs.gif",
       links: makeLinks("ab crunch machine")
     }
   },
@@ -749,7 +749,7 @@ export const EXERCISES: Exercise[] = [
     notes: "تحكم كامل",
     notesEn: "Full control",
     notesAr: "تحكم كامل",
-    defaultGif: "/exercises/incline-db-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
     dumbbellVariation: {
       tool: "بنش مائل + دمبل",
       toolEn: "Incline bench + dumbbell",
@@ -757,7 +757,7 @@ export const EXERCISES: Exercise[] = [
       notes: "تحكم كامل",
       notesEn: "Full control",
       notesAr: "تحكم كامل",
-      gifUrl: "/exercises/incline-db-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
       links: makeLinks("incline dumbbell press", "https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/")
     },
     machineVariation: {
@@ -767,7 +767,7 @@ export const EXERCISES: Exercise[] = [
       notes: "تحكم كامل",
       notesEn: "Full control",
       notesAr: "تحكم كامل",
-      gifUrl: "/exercises/incline-db-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
       links: makeLinks("incline chest press machine")
     }
   },
@@ -791,7 +791,7 @@ export const EXERCISES: Exercise[] = [
     notes: "ضغط كامل",
     notesEn: "Complete press",
     notesAr: "ضغط كامل",
-    defaultGif: "/exercises/db-chest-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Chest-Press-Machine.gif",
     dumbbellVariation: {
       tool: "دمبل (ضغط مستوٍ)",
       toolEn: "Dumbbell (flat press)",
@@ -799,7 +799,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ضغط كامل",
       notesEn: "Complete press",
       notesAr: "ضغط كامل",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
       links: makeLinks("dumbbell chest press", "https://www.acefitness.org/resources/everyone/exercise-library/5/chest-press/")
     },
     machineVariation: {
@@ -809,7 +809,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ضغط كامل",
       notesEn: "Complete press",
       notesAr: "ضغط كامل",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Chest-Press-Machine.gif",
       links: makeLinks("machine chest press")
     }
   },
@@ -833,7 +833,7 @@ export const EXERCISES: Exercise[] = [
     notes: "لا تسحب بالذراع فقط",
     notesEn: "Do not pull only with the arms",
     notesAr: "لا تسحب بالذراع فقط",
-    defaultGif: "/exercises/lat-pulldown.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
     dumbbellVariation: {
       tool: "عقلة / دمبل",
       toolEn: "Pull-up bar",
@@ -841,7 +841,7 @@ export const EXERCISES: Exercise[] = [
       notes: "لا تسحب بالذراع فقط",
       notesEn: "Do not pull only with the arms",
       notesAr: "لا تسحب بالذراع فقط",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown pull up", "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/")
     },
     machineVariation: {
@@ -851,7 +851,7 @@ export const EXERCISES: Exercise[] = [
       notes: "لا تسحب بالذراع فقط",
       notesEn: "Do not pull only with the arms",
       notesAr: "لا تسحب بالذراع فقط",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown machine")
     }
   },
@@ -875,7 +875,7 @@ export const EXERCISES: Exercise[] = [
     notes: "اسحب للبطن",
     notesEn: "Pull toward the abdomen",
     notesAr: "اسحب للبطن",
-    defaultGif: "/exercises/single-arm-row.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif",
     dumbbellVariation: {
       tool: "دمبل (سحب منحني)",
       toolEn: "Dumbbell (bent-over row)",
@@ -883,7 +883,7 @@ export const EXERCISES: Exercise[] = [
       notes: "اسحب للبطن",
       notesEn: "Pull toward the abdomen",
       notesAr: "اسحب للبطن",
-      gifUrl: "/exercises/single-arm-row.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif",
       links: makeLinks("seated cable row")
     },
     machineVariation: {
@@ -893,7 +893,7 @@ export const EXERCISES: Exercise[] = [
       notes: "اسحب للبطن",
       notesEn: "Pull toward the abdomen",
       notesAr: "اسحب للبطن",
-      gifUrl: "/exercises/single-arm-row.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif",
       links: makeLinks("cable row")
     }
   },
@@ -917,7 +917,7 @@ export const EXERCISES: Exercise[] = [
     notes: "نزول ثابت",
     notesEn: "Steady lowering phase",
     notesAr: "نزول ثابت",
-    defaultGif: "/exercises/shoulder-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -925,7 +925,7 @@ export const EXERCISES: Exercise[] = [
       notes: "نزول ثابت",
       notesEn: "Steady lowering phase",
       notesAr: "نزول ثابت",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("seated dumbbell shoulder press", "https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/")
     },
     machineVariation: {
@@ -935,7 +935,7 @@ export const EXERCISES: Exercise[] = [
       notes: "نزول ثابت",
       notesEn: "Steady lowering phase",
       notesAr: "نزول ثابت",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("shoulder press machine")
     }
   },
@@ -959,7 +959,7 @@ export const EXERCISES: Exercise[] = [
     notes: "بدون تأرجح",
     notesEn: "No swinging",
     notesAr: "بدون تأرجح",
-    defaultGif: "/exercises/lateral-raise.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -967,7 +967,7 @@ export const EXERCISES: Exercise[] = [
       notes: "بدون تأرجح",
       notesEn: "No swinging",
       notesAr: "بدون تأرجح",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise", "https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/")
     },
     machineVariation: {
@@ -977,7 +977,7 @@ export const EXERCISES: Exercise[] = [
       notes: "بدون تأرجح",
       notesEn: "No swinging",
       notesAr: "بدون تأرجح",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise machine")
     }
   },
@@ -1001,7 +1001,7 @@ export const EXERCISES: Exercise[] = [
     notes: "قبضة محايدة",
     notesEn: "Neutral grip",
     notesAr: "قبضة محايدة",
-    defaultGif: "/exercises/hammer-curl.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1009,7 +1009,7 @@ export const EXERCISES: Exercise[] = [
       notes: "قبضة محايدة",
       notesEn: "Neutral grip",
       notesAr: "قبضة محايدة",
-      gifUrl: "/exercises/hammer-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
       links: makeLinks("hammer curl", "https://www.acefitness.org/resources/everyone/exercise-library/10/hammer-curl/")
     },
     machineVariation: {
@@ -1019,7 +1019,7 @@ export const EXERCISES: Exercise[] = [
       notes: "قبضة محايدة",
       notesEn: "Neutral grip",
       notesAr: "قبضة محايدة",
-      gifUrl: "/exercises/hammer-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
       links: makeLinks("hammer curl machine")
     }
   },
@@ -1043,7 +1043,7 @@ export const EXERCISES: Exercise[] = [
     notes: "مدّ كامل",
     notesEn: "Full extension",
     notesAr: "مدّ كامل",
-    defaultGif: "/exercises/overhead-triceps.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1051,7 +1051,7 @@ export const EXERCISES: Exercise[] = [
       notes: "مدّ كامل",
       notesEn: "Full extension",
       notesAr: "مدّ كامل",
-      gifUrl: "/exercises/overhead-triceps.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
       links: makeLinks("overhead triceps extension dumbbell", "https://www.acefitness.org/resources/everyone/exercise-library/333/tricep-pressdown/")
     },
     machineVariation: {
@@ -1061,7 +1061,7 @@ export const EXERCISES: Exercise[] = [
       notes: "مدّ كامل",
       notesEn: "Full extension",
       notesAr: "مدّ كامل",
-      gifUrl: "/exercises/overhead-triceps.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
       links: makeLinks("overhead triceps extension cable")
     }
   },
@@ -1086,7 +1086,7 @@ export const EXERCISES: Exercise[] = [
     notes: "هذا اليوم أخف من A و B",
     notesEn: "This day is lighter than A and B",
     notesAr: "هذا اليوم أخف من A و B",
-    defaultGif: "/exercises/shoulder-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1094,7 +1094,7 @@ export const EXERCISES: Exercise[] = [
       notes: "هذا اليوم أخف من A و B",
       notesEn: "This day is lighter than A and B",
       notesAr: "هذا اليوم أخف من A و B",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("seated dumbbell shoulder press", "https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/")
     },
     machineVariation: {
@@ -1104,7 +1104,7 @@ export const EXERCISES: Exercise[] = [
       notes: "هذا اليوم أخف من A و B",
       notesEn: "This day is lighter than A and B",
       notesAr: "هذا اليوم أخف من A و B",
-      gifUrl: "/exercises/shoulder-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
       links: makeLinks("shoulder press machine")
     }
   },
@@ -1128,7 +1128,7 @@ export const EXERCISES: Exercise[] = [
     notes: "ارفع لحد الكتف تقريبًا",
     notesEn: "Raise to about shoulder height",
     notesAr: "ارفع لحد الكتف تقريبًا",
-    defaultGif: "/exercises/lateral-raise.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1136,7 +1136,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ارفع لحد الكتف تقريبًا",
       notesEn: "Raise to about shoulder height",
       notesAr: "ارفع لحد الكتف تقريبًا",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise", "https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/")
     },
     machineVariation: {
@@ -1146,7 +1146,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ارفع لحد الكتف تقريبًا",
       notesEn: "Raise to about shoulder height",
       notesAr: "ارفع لحد الكتف تقريبًا",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("lateral raise machine")
     }
   },
@@ -1170,7 +1170,7 @@ export const EXERCISES: Exercise[] = [
     notes: "ممتاز لشكل الكتف",
     notesEn: "Great for shoulder shape",
     notesAr: "ممتاز لشكل الكتف",
-    defaultGif: "/exercises/lateral-raise.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1178,7 +1178,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ممتاز لشكل الكتف",
       notesEn: "Great for shoulder shape",
       notesAr: "ممتاز لشكل الكتف",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
       links: makeLinks("rear delt raise dumbbell")
     },
     machineVariation: {
@@ -1188,7 +1188,7 @@ export const EXERCISES: Exercise[] = [
       notes: "ممتاز لشكل الكتف",
       notesEn: "Great for shoulder shape",
       notesAr: "ممتاز لشكل الكتف",
-      gifUrl: "/exercises/lateral-raise.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif",
       links: makeLinks("face pull cable")
     }
   },
@@ -1212,7 +1212,7 @@ export const EXERCISES: Exercise[] = [
     notes: "حجم متوسط فقط",
     notesEn: "Moderate volume only",
     notesAr: "حجم متوسط فقط",
-    defaultGif: "/exercises/db-chest-press.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
     dumbbellVariation: {
       tool: "بنش + دمبل",
       toolEn: "Bench + dumbbell",
@@ -1220,7 +1220,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حجم متوسط فقط",
       notesEn: "Moderate volume only",
       notesAr: "حجم متوسط فقط",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
       links: makeLinks("dumbbell chest press", "https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/")
     },
     machineVariation: {
@@ -1230,7 +1230,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حجم متوسط فقط",
       notesEn: "Moderate volume only",
       notesAr: "حجم متوسط فقط",
-      gifUrl: "/exercises/db-chest-press.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif",
       links: makeLinks("machine chest press")
     }
   },
@@ -1254,7 +1254,7 @@ export const EXERCISES: Exercise[] = [
     notes: "حجم خفيف للحفاظ",
     notesEn: "Light maintenance volume",
     notesAr: "حجم خفيف للحفاظ",
-    defaultGif: "/exercises/lat-pulldown.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
     dumbbellVariation: {
       tool: "جهاز / كيبل",
       toolEn: "Machine / cable",
@@ -1262,7 +1262,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حجم خفيف للحفاظ",
       notesEn: "Light maintenance volume",
       notesAr: "حجم خفيف للحفاظ",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown", "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/")
     },
     machineVariation: {
@@ -1272,7 +1272,7 @@ export const EXERCISES: Exercise[] = [
       notes: "حجم خفيف للحفاظ",
       notesEn: "Light maintenance volume",
       notesAr: "حجم خفيف للحفاظ",
-      gifUrl: "/exercises/lat-pulldown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
       links: makeLinks("lat pulldown machine")
     }
   },
@@ -1296,7 +1296,7 @@ export const EXERCISES: Exercise[] = [
     notes: "تحكم كامل",
     notesEn: "Full control",
     notesAr: "تحكم كامل",
-    defaultGif: "/exercises/bicep-curl.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1304,7 +1304,7 @@ export const EXERCISES: Exercise[] = [
       notes: "تحكم كامل",
       notesEn: "Full control",
       notesAr: "تحكم كامل",
-      gifUrl: "/exercises/bicep-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
       links: makeLinks("dumbbell bicep curl", "https://www.acefitness.org/resources/everyone/exercise-library/body-part/arms/")
     },
     machineVariation: {
@@ -1314,7 +1314,7 @@ export const EXERCISES: Exercise[] = [
       notes: "تحكم كامل",
       notesEn: "Full control",
       notesAr: "تحكم كامل",
-      gifUrl: "/exercises/bicep-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
       links: makeLinks("machine bicep curl")
     }
   },
@@ -1338,7 +1338,7 @@ export const EXERCISES: Exercise[] = [
     notes: "خيار إضافي للذراع",
     notesEn: "Optional extra arm work",
     notesAr: "خيار إضافي للذراع",
-    defaultGif: "/exercises/hammer-curl.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
     dumbbellVariation: {
       tool: "دمبل",
       toolEn: "Dumbbell",
@@ -1346,7 +1346,7 @@ export const EXERCISES: Exercise[] = [
       notes: "خيار إضافي للذراع",
       notesEn: "Optional extra arm work",
       notesAr: "خيار إضافي للذراع",
-      gifUrl: "/exercises/hammer-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
       links: makeLinks("hammer curl", "https://www.acefitness.org/resources/everyone/exercise-library/10/hammer-curl/")
     },
     machineVariation: {
@@ -1356,7 +1356,7 @@ export const EXERCISES: Exercise[] = [
       notes: "خيار إضافي للذراع",
       notesEn: "Optional extra arm work",
       notesAr: "خيار إضافي للذراع",
-      gifUrl: "/exercises/hammer-curl.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif",
       links: makeLinks("machine bicep curl")
     }
   },
@@ -1380,7 +1380,7 @@ export const EXERCISES: Exercise[] = [
     notes: "شد كامل",
     notesEn: "Full squeeze",
     notesAr: "شد كامل",
-    defaultGif: "/exercises/triceps-pushdown.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
     dumbbellVariation: {
       tool: "دمبل (سحب خلفي)",
       toolEn: "Dumbbell (kickback)",
@@ -1388,7 +1388,7 @@ export const EXERCISES: Exercise[] = [
       notes: "شد كامل",
       notesEn: "Full squeeze",
       notesAr: "شد كامل",
-      gifUrl: "/exercises/triceps-pushdown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
       links: makeLinks("triceps kickback dumbbell")
     },
     machineVariation: {
@@ -1398,7 +1398,7 @@ export const EXERCISES: Exercise[] = [
       notes: "شد كامل",
       notesEn: "Full squeeze",
       notesAr: "شد كامل",
-      gifUrl: "/exercises/triceps-pushdown.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
       links: makeLinks("triceps pushdown", "https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/")
     }
   },
@@ -1422,7 +1422,7 @@ export const EXERCISES: Exercise[] = [
     notes: "استهداف الرأس الطويل",
     notesEn: "Targets the long head",
     notesAr: "استهداف الرأس الطويل",
-    defaultGif: "/exercises/overhead-triceps.png",
+    defaultGif: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
     dumbbellVariation: {
       tool: "دمبل / كيبل",
       toolEn: "Dumbbell / cable",
@@ -1430,7 +1430,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استهداف الرأس الطويل",
       notesEn: "Targets the long head",
       notesAr: "استهداف الرأس الطويل",
-      gifUrl: "/exercises/overhead-triceps.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
       links: makeLinks("overhead triceps extension dumbbell")
     },
     machineVariation: {
@@ -1440,7 +1440,7 @@ export const EXERCISES: Exercise[] = [
       notes: "استهداف الرأس الطويل",
       notesEn: "Targets the long head",
       notesAr: "استهداف الرأس الطويل",
-      gifUrl: "/exercises/overhead-triceps.png",
+      gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Triceps-Extension.gif",
       links: makeLinks("overhead triceps extension cable")
     }
   }
